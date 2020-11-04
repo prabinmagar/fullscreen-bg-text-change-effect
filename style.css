@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+:root{
+    --persimmon: #e34513;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1320px;
+    z-index: 999;
+    padding: 0.4rem 1rem;
+}
+.nav-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.navbar-brand{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 800;
+    transition: all 0.4s ease;
+}
+.navbar-brand span{
+    color: var(--persimmon)
+}
+.navbar-toggler{
+    color: #fff;
+    display: block;
+    background: transparent;
+    font-size: 1.8rem;
+    padding: 0 0.4rem;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    transition: all 0.4s ease;
+}
+.navbar-brand:hover,
+.navbar-toggler:hover{
+    color: var(--persimmon);
+}
+.navbar-brand:hover span{
+    color: #fff;
+}
+.navbar-nav{
+    border-radius: 5px;
+    text-align: center;
+    background: #fff;
+    list-style-type: none;
+}
+.nav-item{
+    padding: 0.5rem 0;
+    margin: 0.3rem 0;
+}
+.nav-link{
+    text-transform: uppercase;
+    color: #121212;
+    text-decoration: none;
+    font-weight: 600;
+}
+.nav-link:hover{
+    color: #000;
+}
+.navbar-collapse{
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s ease;
+}
+.showNav{
+    height: 250px;
+}
+
+/* header */
+.header{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header #bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero-content-change > div{
+    color: #fff;
+}
+.hero-content-change > div > span{
+    display: block;
+    padding: 0.4rem 0;
+    font-size: 1.4rem;
+}
+.hero-content-change > div h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.line{
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 0.5rem;
+}
+.hero-lg-text{
+    text-transform: uppercase;
+    font-weight: 800;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin: 1.2rem 0;
+}
+.hero-quote{
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+.hero-quote span{
+    color: var(--persimmon);
+}
+.hero-btn{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background: var(--persimmon);
+    border: 2px solid var(--persimmon);
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.hero-btn:hover{
+    border-color: #fff;
+    background: transparent;
+}
+
+/* Media Queries */
+@media screen and (min-width: 500px){
+    .hero-content-change > div > span{
+        font-size: 3rem;
+    }
+    .hero-content-change > div h3{
+        font-size: 1.4rem;
+    }
+    .line{
+        margin: 0 2rem;
+        width: 100px;
+    }
+    .hero-lg-text{
+        font-size: 3rem;
+    }
+    .hero-quote{
+        font-size: 1.2rem;
+        width: 70%;
+        margin: 2.4rem auto;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navbar-toggler{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .nav-top{
+        flex: 0 0 auto;
+    }
+    .navbar-collapse{
+        height: 100%;
+        flex: 1 0 auto;
+    }
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background: transparent;
+    }
+    .nav-link{
+        color: #fff!important;
+        opacity: 0.7;
+    }
+    .nav-link:hover{
+        opacity: 1;
+    }
+    .nav-item{
+        margin-left: 0.8rem;
+        padding-left: 0.8rem;
+    }
+    .hero-lg-text{
+        width: 80%;
+        margin: 2rem auto;
+        font-size: 4.2rem;
+    }
+    .hero-quote{
+        width: 55%;
+    }
+    .hero-btn{
+        font-size: 1.1rem;
+    }
+}
+
+/* resizing styling */
+.resize-trans-stop *{
+    transition: none!important;
+}
